@@ -12,7 +12,10 @@ const cairo = Cairo({
 
 export const metadata: Metadata = {
   title: 'الماهر شو | Almaher Show',
-  description: 'البرنامج الأضخم لاكتشاف أجمل الأصوات في تلاوة القرآن الكريم. تجربة روحانية تنير القلوب.',
+  description: 'البرنامج الأضخم للتنافس بين حفظة كتاب الله في قوة الحفظ وإتقان المتشابهات. تجربة روحانية تنير القلوب.',
+  icons: {
+    icon: '/logo.jpg',
+  },
 };
 
 export default function RootLayout({
