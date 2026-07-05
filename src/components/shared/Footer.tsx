@@ -34,8 +34,8 @@ export default function Footer() {
           <div>
             <h3 className="text-white font-bold mb-6 text-lg border-b border-[#D4AF37]/30 pb-2 inline-block">تواصل معنا</h3>
             <ul className="space-y-4 text-gray-400">
-              <li>البريد: info@almahershow.com</li>
-              <li>الهاتف: +962 00 000 0000</li>
+              <li>البريد: <a href="mailto:almaherinfo6@gmail.com" className="hover:text-[#D4AF37] transition-colors" dir="ltr">almaherinfo6@gmail.com</a></li>
+              <li>الهاتف: <a href="tel:+962772567297" className="hover:text-[#D4AF37] transition-colors" dir="ltr">+962 7 7256 7297</a></li>
               <li className="pt-4">
                 <div className="flex gap-4">
                   {/* Social Icons Placeholders */}
