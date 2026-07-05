@@ -1,7 +1,12 @@
+"use client";
+
 import Link from 'next/link';
 import Image from 'next/image';
+import { useState } from 'react';
 
 export default function Navbar() {
+  const [isOpen, setIsOpen] = useState(false);
+
   const links = [
     { name: 'الرئيسية', path: '/' },
     { name: 'عن البرنامج', path: '/about' },
@@ -48,16 +53,50 @@ export default function Navbar() {
             </Link>
           </div>
 
-          {/* Mobile Menu Button (simplified for now) */}
+          {/* Mobile Menu Button */}
           <div className="md:hidden flex items-center">
-            <button className="text-gray-300 hover:text-white">
-              <svg className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
-              </svg>
+            <button 
+              onClick={() => setIsOpen(!isOpen)}
+              className="text-gray-300 hover:text-[#D4AF37] transition-colors focus:outline-none p-2"
+            >
+              {isOpen ? (
+                <svg className="h-7 w-7" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+                </svg>
+              ) : (
+                <svg className="h-7 w-7" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
+                </svg>
+              )}
             </button>
           </div>
         </div>
       </div>
+
+      {/* Mobile Menu Dropdown */}
+      {isOpen && (
+        <div className="md:hidden absolute top-20 left-0 w-full bg-[#0B1021]/95 backdrop-blur-xl border-b border-white/5 py-8 shadow-2xl border-t border-[#D4AF37]/20">
+          <div className="flex flex-col items-center gap-6">
+            {links.map((link) => (
+              <Link 
+                key={link.path} 
+                href={link.path}
+                onClick={() => setIsOpen(false)}
+                className="text-lg font-bold text-gray-300 hover:text-[#D4AF37] transition-colors"
+              >
+                {link.name}
+              </Link>
+            ))}
+            <Link 
+              href="/apply"
+              onClick={() => setIsOpen(false)}
+              className="mt-4 px-10 py-3 bg-gradient-to-r from-[#D4AF37] to-[#B8860B] text-black font-bold rounded-full hover:scale-105 transition-transform shadow-[0_0_15px_rgba(212,175,55,0.3)]"
+            >
+              شارك معنا
+            </Link>
+          </div>
+        </div>
+      )}
     </nav>
   );
 }
