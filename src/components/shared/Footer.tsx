@@ -39,9 +39,15 @@ export default function Footer() {
               <li className="pt-4">
                 <div className="flex gap-4">
                   {/* Social Icons Placeholders */}
-                  <a href="#" className="w-10 h-10 rounded-full bg-white/5 flex items-center justify-center hover:bg-[#D4AF37] hover:text-black transition-all text-xl">▶️</a>
-                  <a href="#" className="w-10 h-10 rounded-full bg-white/5 flex items-center justify-center hover:bg-[#D4AF37] hover:text-black transition-all text-xl">📸</a>
-                  <a href="#" className="w-10 h-10 rounded-full bg-white/5 flex items-center justify-center hover:bg-[#D4AF37] hover:text-black transition-all text-xl">📘</a>
+                  <a href="#" className="w-10 h-10 relative rounded-full overflow-hidden hover:scale-110 transition-transform bg-white/5">
+                    <Image src="/youtube.png" alt="YouTube" fill className="object-cover" />
+                  </a>
+                  <a href="#" className="w-10 h-10 relative rounded-full overflow-hidden hover:scale-110 transition-transform bg-white/5">
+                    <Image src="/instagram.png" alt="Instagram" fill className="object-cover" />
+                  </a>
+                  <a href="#" className="w-10 h-10 relative rounded-full overflow-hidden hover:scale-110 transition-transform bg-white/5">
+                    <Image src="/facebook.png" alt="Facebook" fill className="object-cover" />
+                  </a>
                 </div>
               </li>
             </ul>
