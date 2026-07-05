@@ -1,14 +1,19 @@
+import Image from "next/image";
+
 export default function AboutPage() {
   return (
-    <div className="max-w-7xl mx-auto px-4 py-20">
-      <div className="text-center mb-16">
+    <div className="max-w-7xl mx-auto px-4 py-20 space-y-24">
+      
+      {/* Header */}
+      <div className="text-center">
         <h1 className="text-4xl md:text-5xl font-bold text-[#D4AF37] mb-6">عن برنامج الماهر</h1>
         <div className="h-1 w-24 bg-[#D4AF37] mx-auto rounded-full opacity-50" />
       </div>
 
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-16 items-center mb-24">
+      {/* Vision and Mission */}
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-16 items-center">
         <div>
-          <h2 className="text-3xl font-bold mb-6 text-white">الرؤية والرسالة</h2>
+          <h2 className="text-3xl font-bold mb-6 text-white">نبذة عن البرنامج</h2>
           <p className="text-gray-300 text-lg leading-relaxed mb-6">
             برنامج "الماهر في القرآن" هو المنصة التنافسية الأولى لحفظة كتاب الله من مختلف أنحاء العالم، حيث يتنافسون في قوة الحفظ والتمكن من الآيات المتشابهات وسرعة الاستحضار.
           </p>
@@ -19,29 +24,115 @@ export default function AboutPage() {
         <div className="bg-[#12182B]/60 border border-white/5 rounded-3xl p-8 relative overflow-hidden h-80">
           <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-64 h-64 bg-[#D4AF37]/20 rounded-full blur-[80px]" />
           <div className="relative z-10 flex items-center justify-center h-full">
-            <span className="text-[#D4AF37] text-2xl font-bold">صورة أو فيديو تعريفي</span>
+            <span className="text-[#D4AF37] text-2xl font-bold">الماهر في القرآن</span>
           </div>
         </div>
       </div>
 
-      <div className="bg-[#12182B]/40 rounded-3xl p-10 border border-white/5 mb-24">
-        <h2 className="text-3xl font-bold mb-10 text-center text-white">آلية المسابقة</h2>
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-          {[
-            { step: '1', title: 'التصفيات الأولية', desc: 'استقبال المشاركات عبر الموقع الإلكتروني وفرزها من قبل لجان مختصة.' },
-            { step: '2', title: 'العروض المباشرة', desc: 'مواجهات مباشرة بين المشتركين أمام لجنة التحكيم المكونة من كبار القراء.' },
-            { step: '3', title: 'الحلقة الختامية', desc: 'تتويج الفائز بلقب "الماهر" بجوائز قيمة في حفل قرآني مهيب.' },
-          ].map((item) => (
-            <div key={item.step} className="text-center">
-              <div className="w-16 h-16 mx-auto bg-[#D4AF37]/20 rounded-full flex items-center justify-center text-2xl font-bold text-[#D4AF37] mb-6">
-                {item.step}
-              </div>
-              <h3 className="text-xl font-bold text-white mb-4">{item.title}</h3>
-              <p className="text-gray-400">{item.desc}</p>
+      {/* Team Section */}
+      <div>
+        <h2 className="text-3xl font-bold mb-10 text-center text-white">فريق العمل</h2>
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+          
+          {/* Presenter */}
+          <div className="bg-[#12182B]/60 border border-white/10 rounded-2xl overflow-hidden hover:border-[#D4AF37]/50 transition-colors p-6 text-center">
+            <div className="relative w-32 h-32 mx-auto rounded-full overflow-hidden border-2 border-[#D4AF37] mb-4">
+              <Image src="/presenter.jpg" alt="أحمد النعلاوي" fill className="object-cover" />
             </div>
-          ))}
+            <h3 className="text-xl font-bold text-white mb-2">أحمد النعلاوي</h3>
+            <p className="text-[#D4AF37]">مقدم البرنامج</p>
+          </div>
+
+          {/* Director */}
+          <div className="bg-[#12182B]/60 border border-white/10 rounded-2xl overflow-hidden hover:border-[#D4AF37]/50 transition-colors p-6 text-center">
+            <div className="relative w-32 h-32 mx-auto rounded-full overflow-hidden border-2 border-[#D4AF37] mb-4 bg-gray-800 flex items-center justify-center">
+               <span className="text-gray-400 text-sm">صورة المخرج</span>
+            </div>
+            <h3 className="text-xl font-bold text-white mb-2">اسم المخرج</h3>
+            <p className="text-[#D4AF37]">مخرج البرنامج</p>
+          </div>
+
+          {/* Prep Team 1 */}
+          <div className="bg-[#12182B]/60 border border-white/10 rounded-2xl overflow-hidden hover:border-[#D4AF37]/50 transition-colors p-6 text-center">
+            <div className="relative w-32 h-32 mx-auto rounded-full overflow-hidden border-2 border-[#D4AF37] mb-4 bg-gray-800 flex items-center justify-center">
+               <span className="text-gray-400 text-sm">صورة الإعداد</span>
+            </div>
+            <h3 className="text-xl font-bold text-white mb-2">عضو الإعداد 1</h3>
+            <p className="text-[#D4AF37]">فريق الإعداد</p>
+          </div>
+
+          {/* Prep Team 2 */}
+          <div className="bg-[#12182B]/60 border border-white/10 rounded-2xl overflow-hidden hover:border-[#D4AF37]/50 transition-colors p-6 text-center">
+            <div className="relative w-32 h-32 mx-auto rounded-full overflow-hidden border-2 border-[#D4AF37] mb-4 bg-gray-800 flex items-center justify-center">
+               <span className="text-gray-400 text-sm">صورة الإعداد</span>
+            </div>
+            <h3 className="text-xl font-bold text-white mb-2">عضو الإعداد 2</h3>
+            <p className="text-[#D4AF37]">فريق الإعداد</p>
+          </div>
+
         </div>
       </div>
+
+      {/* Seasons Overview */}
+      <div className="bg-[#12182B]/40 rounded-3xl p-10 border border-white/5">
+        <h2 className="text-3xl font-bold mb-10 text-center text-white">مواسم البرنامج</h2>
+        <div className="space-y-8">
+          
+          <div className="flex flex-col md:flex-row gap-6 items-center p-6 bg-[#0B1021] rounded-2xl border border-white/5">
+            <div className="w-16 h-16 bg-[#D4AF37]/10 rounded-full flex items-center justify-center flex-shrink-0">
+              <span className="text-2xl">🏆</span>
+            </div>
+            <div>
+              <h3 className="text-2xl font-bold text-white mb-2">مواسم البطولات</h3>
+              <p className="text-gray-400 leading-relaxed mb-4">
+                مواسم خاصة تشهد أقوى التنافسات على مستوى عالٍ، حيث يتوج فيها الفائز بلقب البطولة وتكريمه على إتقانه المتميز.
+              </p>
+              <div className="flex flex-wrap gap-4">
+                <span className="bg-[#D4AF37]/20 text-[#D4AF37] px-4 py-2 rounded-full text-sm font-bold border border-[#D4AF37]/30">بطل الموسم (الاسم الأول)</span>
+                <span className="bg-[#D4AF37]/20 text-[#D4AF37] px-4 py-2 rounded-full text-sm font-bold border border-[#D4AF37]/30">بطل الموسم (الاسم الثاني)</span>
+              </div>
+            </div>
+          </div>
+
+          <div className="flex flex-col md:flex-row gap-6 items-center p-6 bg-[#0B1021] rounded-2xl border border-white/5">
+            <div className="w-16 h-16 bg-blue-500/10 rounded-full flex items-center justify-center flex-shrink-0">
+              <span className="text-2xl">🤝</span>
+            </div>
+            <div>
+              <h3 className="text-2xl font-bold text-white mb-2">المواسم الودية</h3>
+              <p className="text-gray-400 leading-relaxed">
+                مواسم ذات طابع تنافسي ودي، تهدف لتعزيز الأجواء الأخوية واستعراض مهارات الحفظ وإتقان المتشابهات.
+              </p>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      {/* Contact Section */}
+      <div>
+        <h2 className="text-3xl font-bold mb-10 text-center text-white">للتواصل</h2>
+        <div className="max-w-2xl mx-auto flex flex-col sm:flex-row gap-6 justify-center">
+          
+          <div className="bg-[#12182B]/60 border border-[#D4AF37]/30 rounded-2xl p-6 flex flex-col items-center flex-1 hover:bg-[#12182B] transition-colors">
+            <div className="w-12 h-12 bg-[#D4AF37]/10 rounded-full flex items-center justify-center mb-4 text-[#D4AF37] text-xl">
+              ✉️
+            </div>
+            <h3 className="text-lg font-bold text-white mb-2">البريد الإلكتروني</h3>
+            <a href="mailto:almaherinfo6@gmail.com" className="text-gray-300 hover:text-[#D4AF37] transition-colors" dir="ltr">almaherinfo6@gmail.com</a>
+          </div>
+
+          <div className="bg-[#12182B]/60 border border-[#D4AF37]/30 rounded-2xl p-6 flex flex-col items-center flex-1 hover:bg-[#12182B] transition-colors">
+            <div className="w-12 h-12 bg-[#D4AF37]/10 rounded-full flex items-center justify-center mb-4 text-[#D4AF37] text-xl">
+              📞
+            </div>
+            <h3 className="text-lg font-bold text-white mb-2">رقم الهاتف</h3>
+            <a href="tel:+962772567297" className="text-gray-300 hover:text-[#D4AF37] transition-colors" dir="ltr">+962 7 7256 7297</a>
+          </div>
+
+        </div>
+      </div>
+
     </div>
   );
 }
