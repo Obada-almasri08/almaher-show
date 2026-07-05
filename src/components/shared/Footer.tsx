@@ -39,14 +39,14 @@ export default function Footer() {
               <li className="pt-4">
                 <div className="flex gap-4">
                   {/* Social Icons Placeholders */}
-                  <a href="#" className="w-10 h-10 relative hover:scale-110 transition-transform">
-                    <Image src="/youtube.png" alt="YouTube" fill className="object-contain" />
+                  <a href="#" className="w-10 h-10 relative rounded-full overflow-hidden hover:scale-110 transition-transform">
+                    <Image src="/youtube.png" alt="YouTube" fill className="object-cover scale-[1.2]" />
                   </a>
-                  <a href="#" className="w-10 h-10 relative hover:scale-110 transition-transform">
-                    <Image src="/instagram.png" alt="Instagram" fill className="object-contain" />
+                  <a href="#" className="w-10 h-10 relative rounded-[30%] overflow-hidden hover:scale-110 transition-transform">
+                    <Image src="/instagram.png" alt="Instagram" fill className="object-cover scale-[1.15]" />
                   </a>
-                  <a href="#" className="w-10 h-10 relative hover:scale-110 transition-transform">
-                    <Image src="/facebook.png" alt="Facebook" fill className="object-contain" />
+                  <a href="#" className="w-10 h-10 relative rounded-[25%] overflow-hidden hover:scale-110 transition-transform">
+                    <Image src="/facebook.png" alt="Facebook" fill className="object-cover scale-[1.1]" />
                   </a>
                 </div>
               </li>
