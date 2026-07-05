@@ -32,7 +32,7 @@ export default function AboutPage() {
       {/* Team Section */}
       <div>
         <h2 className="text-3xl font-bold mb-10 text-center text-white">فريق العمل</h2>
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-8 max-w-2xl mx-auto">
           
           {/* Presenter */}
           <div className="bg-[#12182B]/60 border border-white/10 rounded-2xl overflow-hidden hover:border-[#D4AF37]/50 transition-colors p-6 text-center">
@@ -45,29 +45,11 @@ export default function AboutPage() {
 
           {/* Director */}
           <div className="bg-[#12182B]/60 border border-white/10 rounded-2xl overflow-hidden hover:border-[#D4AF37]/50 transition-colors p-6 text-center">
-            <div className="relative w-32 h-32 mx-auto rounded-full overflow-hidden border-2 border-[#D4AF37] mb-4 bg-gray-800 flex items-center justify-center">
-               <span className="text-gray-400 text-sm">صورة المخرج</span>
+            <div className="relative w-32 h-32 mx-auto rounded-full overflow-hidden border-2 border-[#D4AF37] mb-4">
+              <Image src="/director.jpg" alt="أسامة مصلح" fill className="object-cover" />
             </div>
-            <h3 className="text-xl font-bold text-white mb-2">اسم المخرج</h3>
+            <h3 className="text-xl font-bold text-white mb-2">أسامة مصلح</h3>
             <p className="text-[#D4AF37]">مخرج البرنامج</p>
-          </div>
-
-          {/* Prep Team 1 */}
-          <div className="bg-[#12182B]/60 border border-white/10 rounded-2xl overflow-hidden hover:border-[#D4AF37]/50 transition-colors p-6 text-center">
-            <div className="relative w-32 h-32 mx-auto rounded-full overflow-hidden border-2 border-[#D4AF37] mb-4 bg-gray-800 flex items-center justify-center">
-               <span className="text-gray-400 text-sm">صورة الإعداد</span>
-            </div>
-            <h3 className="text-xl font-bold text-white mb-2">عضو الإعداد 1</h3>
-            <p className="text-[#D4AF37]">فريق الإعداد</p>
-          </div>
-
-          {/* Prep Team 2 */}
-          <div className="bg-[#12182B]/60 border border-white/10 rounded-2xl overflow-hidden hover:border-[#D4AF37]/50 transition-colors p-6 text-center">
-            <div className="relative w-32 h-32 mx-auto rounded-full overflow-hidden border-2 border-[#D4AF37] mb-4 bg-gray-800 flex items-center justify-center">
-               <span className="text-gray-400 text-sm">صورة الإعداد</span>
-            </div>
-            <h3 className="text-xl font-bold text-white mb-2">عضو الإعداد 2</h3>
-            <p className="text-[#D4AF37]">فريق الإعداد</p>
           </div>
 
         </div>
@@ -82,15 +64,34 @@ export default function AboutPage() {
             <div className="w-16 h-16 bg-[#D4AF37]/10 rounded-full flex items-center justify-center flex-shrink-0">
               <span className="text-2xl">🏆</span>
             </div>
-            <div>
+            <div className="flex-1">
               <h3 className="text-2xl font-bold text-white mb-2">مواسم البطولات</h3>
-              <p className="text-gray-400 leading-relaxed mb-4">
+              <p className="text-gray-400 leading-relaxed mb-6">
                 مواسم خاصة تشهد أقوى التنافسات على مستوى عالٍ، حيث يتوج فيها الفائز بلقب البطولة وتكريمه على إتقانه المتميز.
               </p>
-              <div className="flex flex-wrap gap-4">
-                <span className="bg-[#D4AF37]/20 text-[#D4AF37] px-4 py-2 rounded-full text-sm font-bold border border-[#D4AF37]/30">بطل الموسم (الاسم الأول)</span>
-                <span className="bg-[#D4AF37]/20 text-[#D4AF37] px-4 py-2 rounded-full text-sm font-bold border border-[#D4AF37]/30">بطل الموسم (الاسم الثاني)</span>
+              
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                <div className="flex items-center gap-4 bg-[#12182B]/60 p-3 rounded-xl border border-[#D4AF37]/30">
+                  <div className="relative w-16 h-16 rounded-full overflow-hidden border border-[#D4AF37]">
+                    <Image src="/winner3.jpg" alt="مالك الجمال" fill className="object-cover" />
+                  </div>
+                  <div>
+                    <h4 className="font-bold text-white text-lg">مالك الجمال</h4>
+                    <p className="text-sm text-[#D4AF37]">بطل الموسم الثالث</p>
+                  </div>
+                </div>
+
+                <div className="flex items-center gap-4 bg-[#12182B]/60 p-3 rounded-xl border border-[#D4AF37]/30">
+                  <div className="relative w-16 h-16 rounded-full overflow-hidden border border-[#D4AF37]">
+                    <Image src="/winner5.jpg" alt="محمد غانم" fill className="object-cover" />
+                  </div>
+                  <div>
+                    <h4 className="font-bold text-white text-lg">محمد غانم</h4>
+                    <p className="text-sm text-[#D4AF37]">بطل الموسم الخامس</p>
+                  </div>
+                </div>
               </div>
+
             </div>
           </div>
 
